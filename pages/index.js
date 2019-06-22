@@ -29,6 +29,4 @@ Index.getInitialProps = async function() {
   };
 };
 
-
-// NOTE: avoid HOC for Layout because getInitialProps wont work
 export default Index;
