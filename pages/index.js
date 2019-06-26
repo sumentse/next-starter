@@ -1,9 +1,9 @@
-import Link from "next/link";
 import fetch from "isomorphic-unfetch";
-import Layout from "../components/Layout";
+import Layout from "../components/base/Layout";
+import Link from "next/link";
+import {connect} from "react-redux";
 
 const Index = props => {
-
   return (
     <Layout>
       <h1>My Blog Test</h1>
@@ -29,4 +29,8 @@ Index.getInitialProps = async function() {
   };
 };
 
-export default Index;
+const mapStateToProps = (state)=>{
+  return state;
+}
+
+export default connect(mapStateToProps)(Index);
